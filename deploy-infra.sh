@@ -20,6 +20,6 @@ aws cloudformation deploy \
     # If the deploy succeeded, show the DNS name of the created instance
 if [ $? -eq 0 ]; then
   aws cloudformation list-exports \
-    --profile esteban-dev \
+    --profile awsbootstrap \
     --query "Exports[?Name=='InstanceEndpoint'].Value" 
 fi
